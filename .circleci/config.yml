@@ -299,10 +299,6 @@ jobs:
             
 
 workflows:
-  send notifications:
-    jobs:
-      - scan-backend:
-          context: [Slack-secrets]
   default:
     jobs:
       - build-frontend
@@ -313,6 +309,7 @@ workflows:
           requires: [build-backend]
       - scan-backend:
           requires: [build-backend]
+          # context: [Slack-secrets]
       - scan-frontend:
           requires: [build-frontend]
       # - deploy-infrastructure:
