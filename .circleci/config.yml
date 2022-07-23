@@ -75,7 +75,7 @@ jobs:
       - restore_cache:
           keys: [frontend-build]
       - run:
-          name: frontend test
+          name: run frontend test
           command: |
               cd backend
               npm install
@@ -89,7 +89,7 @@ jobs:
       - restore_cache:
           keys: [backend-build]
       - run:
-          name: backend test
+          name: run backend test
           command: |
               cd backend
               npm install
