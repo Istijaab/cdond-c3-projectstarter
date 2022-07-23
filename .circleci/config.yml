@@ -100,7 +100,6 @@ jobs:
   scan-frontend:
     docker:
       - image: circleci/node:13.8.0
-    context: Slack-secrets
     steps:
       - checkout
       - restore_cache:
@@ -310,6 +309,8 @@ workflows:
           requires: [build-backend]
       - scan-backend:
           requires: [build-backend]
+      - notify:
+          context: Slack-secrets
       - scan-frontend:
           requires: [build-frontend]
       # - deploy-infrastructure:
