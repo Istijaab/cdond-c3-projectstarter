@@ -301,7 +301,7 @@ jobs:
 workflows:
   send notifications:
     jobs:
-      - notify:
+      - scan-backend:
           context: [Slack-secrets]
   default:
     jobs:
