@@ -115,6 +115,8 @@ jobs:
   scan-backend:
     docker:
       - image: circleci/node:13.8.0
+    notify:
+      - context: Slack-secrets
     steps:
       - checkout
       - restore_cache:
