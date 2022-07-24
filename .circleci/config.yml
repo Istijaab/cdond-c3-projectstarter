@@ -159,7 +159,7 @@ jobs:
             aws cloudformation deploy \
               --template-file .circleci/files/frontend.yml \
               --tags project=your-tag \
-              --stack-name udapeople-backend-${CCI_WORKFLOW_ID:0:4} \
+              --stack-name udapeople-frontend-${CCI_WORKFLOW_ID:0:4} \
               --parameter-overrides ID="${CCI_WORKFLOW_ID:0:4}"  
 
       - run:
