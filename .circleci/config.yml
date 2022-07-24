@@ -8,7 +8,7 @@ commands:
     parameters:
       workflow_ID:
       type: string
-      default: ${CCI_WORKFLOW_ID}  
+      default: ${CCI_WORKFLOW_ID:0:4}  
     steps:
       - run:
           name: Destroy environments
