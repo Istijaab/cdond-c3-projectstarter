@@ -172,7 +172,7 @@ jobs:
           paths:
             - project/.circleci/ansible/inventory.txt
       - destroy-environment:
-        workflow_ID: ${CCI_WORKFLOW_ID:0:4}
+         workflow_ID: ${CCI_WORKFLOW_ID:0:4}
   # configure-infrastructure:
   #   docker:
   #     # Docker image here that supports Ansible
